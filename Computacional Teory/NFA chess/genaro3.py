@@ -119,20 +119,21 @@ def correr(cadena):
 """
 Funcion main
 """
-op=0
-while op!=3:
-    
-    posibilidades.clear()
-    ganadoras.clear(    )
-    print("1.-Ejecutar nfa con cadena aleatoria de longitud en el rango de 0-100")
-    print("2.-Ejecutar nfa con cadena ingresada por usuario\n3.-Salir")
-    op=int(input("\nElija la opcion deseada-->"))
-    if op==1:
-        correr(gene_ale())
-    elif op==2:
-        print("Introduzca cadena de tipo, con un maximo de 20 mov\n\tr,b,r,b,b,r")
-        print("r=red\nb=black")
-        cad_gen = input("-->")
-        correr(cad_gen)
-        
-        
+if __name__ == '__main__':
+
+    op=0
+    while op!=3:
+
+        posibilidades.clear()
+        ganadoras.clear(    )
+        print("1.-Ejecutar nfa con cadena aleatoria de longitud en el rango de 0-100")
+        print("2.-Ejecutar nfa con cadena ingresada por usuario\n3.-Salir")
+        op=int(input("\nElija la opcion deseada-->"))
+        if op==1:
+            correr(gene_ale())
+        elif op==2:
+            print("Introduzca cadena de tipo, con un maximo de 20 mov\n\tr,b,r,b,b,r")
+            print("r=red\nb=black")
+            cad_gen = input("-->")
+            correr(cad_gen)
+
